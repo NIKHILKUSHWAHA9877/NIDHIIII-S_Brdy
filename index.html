@@ -769,14 +769,9 @@ margin-right: 25%;
   
   customElements.define('audio-player', AudioPlayer);
 }
-if (window.innerWidth <= 768 && window.innerWidth < window.innerHeight) {
-  var mobileWarning = document.querySelector('.mobile-warning');
-  if (mobileWarning) {
-    mobileWarning.style.display = 'block';
-  }
-
-  function isDesktopView() {
-  return window.innerWidth > 768 && window.innerWidth >= window.innerHeight;
+// Function to check if the viewport is in desktop mode
+function isDesktopView() {
+  return window.matchMedia('(min-width: 769px)').matches && window.innerWidth >= window.innerHeight;
 }
 
 // Display warning if in desktop view
@@ -792,7 +787,10 @@ displayWarning();
 
 // Check and display warning on viewport resize
 window.addEventListener('resize', displayWarning);
-}
+
+// Check and display warning when viewport changes (e.g., toggling desktop site on mobile browser)
+window.matchMedia('(min-width: 769px)').addEventListener('change', displayWarning);
+
     </script>
 </body>
 </html>
