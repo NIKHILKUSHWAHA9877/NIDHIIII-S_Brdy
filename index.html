@@ -769,28 +769,14 @@ margin-right: 25%;
   
   customElements.define('audio-player', AudioPlayer);
 }
-// Function to check if the viewport is in desktop mode
-function isDesktopView() {
-  return window.matchMedia('(min-width: 769px)').matches && window.innerWidth >= window.innerHeight;
-}
-
-// Display warning if in desktop view
-function displayWarning() {
+if (window.innerWidth <= 768 && window.innerWidth < window.innerHeight) {
   var mobileWarning = document.querySelector('.mobile-warning');
   if (mobileWarning) {
-    mobileWarning.style.display = isDesktopView() ? 'block' : 'none';
+    mobileWarning.style.display = 'block';
   }
+
+  
 }
-
-// Check and display warning on page load
-displayWarning();
-
-// Check and display warning on viewport resize
-window.addEventListener('resize', displayWarning);
-
-// Check and display warning when viewport changes (e.g., toggling desktop site on mobile browser)
-window.matchMedia('(min-width: 769px)').addEventListener('change', displayWarning);
-
     </script>
 </body>
 </html>
