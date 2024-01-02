@@ -769,11 +769,29 @@ margin-right: 25%;
   
   customElements.define('audio-player', AudioPlayer);
 }
-        if (window.innerWidth <= 768 && window.innerWidth < window.innerHeight) {
+if (window.innerWidth <= 768 && window.innerWidth < window.innerHeight) {
   var mobileWarning = document.querySelector('.mobile-warning');
   if (mobileWarning) {
     mobileWarning.style.display = 'block';
   }
+
+  function isDesktopView() {
+  return window.innerWidth > 768 && window.innerWidth >= window.innerHeight;
+}
+
+// Display warning if in desktop view
+function displayWarning() {
+  var mobileWarning = document.querySelector('.mobile-warning');
+  if (mobileWarning) {
+    mobileWarning.style.display = isDesktopView() ? 'block' : 'none';
+  }
+}
+
+// Check and display warning on page load
+displayWarning();
+
+// Check and display warning on viewport resize
+window.addEventListener('resize', displayWarning);
 }
     </script>
 </body>
