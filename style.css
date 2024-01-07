@@ -101,7 +101,14 @@ h1 {
   padding: 1em 2em;
   background: #313131;
   border-radius: 10px;
+  
 }
+.flip > .back {
+ 
+font-size: 1px !important;
+
+}
+
 .flip > .front_3, 
 .flip > .back {
   
@@ -1044,7 +1051,7 @@ font-family: sans-serif !important;
          font-size: 11px;
          text-align: left;
          margin-left: 5px;
-         margin-top: 15px;
+         margin-top: 12px;
        }
        
        .name {
@@ -1055,7 +1062,8 @@ font-family: sans-serif !important;
        }
        
        .quora{
-         font-family: Tahoma, sans-serif;
+        margin-top: 15px;
+        font-family: "Poppins", sans-serif;
          color: #333;
          text-align: center;
          /* margin: 30px; */
@@ -1101,4 +1109,24 @@ font-family: sans-serif !important;
         .card{
           display: none;
         }
+      }
+
+      .backfont{
+margin-top: 15px;
+padding: 0px 20px;
+      }
+
+      .backFont_9 {
+        margin-top: 4px !important;
+      }
+
+      .backFont_2{
+        margin-top: 4px !important
+      } 
+      .backFont_5{
+        margin-top: 4px !important
+      } 
+      .backFont_3{
+font-size: 11.3px !important;
+margin-top: 4px !important
       }
