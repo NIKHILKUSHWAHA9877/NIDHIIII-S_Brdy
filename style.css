@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  font-weight: normal;
+
 }
 
 body {
@@ -571,7 +571,8 @@ font-size: 1px !important;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  
+    font-weight: 500;
+
 }
 
 body {
